@@ -52,7 +52,7 @@ Now you can use the `API` to `CRUD` your database
 4. delete a user by user_id: `curl -H "Content-Type: application/json" <service_URL>/delete/<user_id>`
 5. update a user's information: `curl -H "Content-Type: application/json" -d {"name": "<user_name>", "email": "<user_email>", "pwd": "<user_password>", "user_id": <user_id>} <service_URL>/update`
 
-
+```
 curl -H "Content-Type: application/json" -d '{"name": "Jens", "email": "Jens@bla.com", "pwd": "root"}' 10.110.222.19:3306/create
 
 kubectl exec -it mysql-0  -- bash
@@ -61,6 +61,6 @@ CREATE DATABASE flaskapi;
 USE flaskapi;
 CREATE TABLE users(user_id INT PRIMARY KEY AUTO_INCREMENT, user_name VARCHAR(255), user_email VARCHAR(255), user_password VARCHAR(255));
 INSERT INTO users values(1, "Biju", "biju@asda", "bijubiju");
-
+```
 
 Inspired by  [person](https://www.kdnuggets.com/2021/02/deploy-flask-api-kubernetes-connect-micro-services.html)
