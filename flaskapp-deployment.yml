@@ -23,10 +23,7 @@ spec:
             - containerPort: 5000
           env:
             - name: db_root_password
-              valueFrom:
-                secretKeyRef:
-                  name: flaskapi-secrets
-                  key: db_root_password
+              value: root
             - name: db_name
               value: flaskapi
 

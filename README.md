@@ -51,3 +51,17 @@ Now you can use the `API` to `CRUD` your database
 3. get information of a specific user: `curl <service_URL>/user/<user_id>`
 4. delete a user by user_id: `curl -H "Content-Type: application/json" <service_URL>/delete/<user_id>`
 5. update a user's information: `curl -H "Content-Type: application/json" -d {"name": "<user_name>", "email": "<user_email>", "pwd": "<user_password>", "user_id": <user_id>} <service_URL>/update`
+
+
+curl -H "Content-Type: application/json" -d '{"name": "Jens", "email": "Jens@bla.com", "pwd": "root"}' 10.110.222.19:3306/create
+
+kubectl exec -it mysql-0  -- bash
+mysql --host mysql --password=root
+CREATE DATABASE flaskapi;
+USE flaskapi;
+CREATE TABLE users(user_id INT PRIMARY KEY AUTO_INCREMENT, user_name VARCHAR(255), user_email VARCHAR(255), user_password VARCHAR(255));
+INSERT INTO users values(1, "Biju", "biju@asda", "bijubiju");
+
+
+MYSQL_SERVICE_HOST=10.110.222.19
+mysql           NodePort       10.102.82.146 
