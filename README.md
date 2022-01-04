@@ -63,7 +63,4 @@ CREATE TABLE users(user_id INT PRIMARY KEY AUTO_INCREMENT, user_name VARCHAR(255
 INSERT INTO users values(1, "Biju", "biju@asda", "bijubiju");
 
 
-MYSQL_SERVICE_HOST=10.110.222.19
-mysql           NodePort       10.102.82.146 
-
-Inspired by this [person](https://www.kdnuggets.com/2021/02/deploy-flask-api-kubernetes-connect-micro-services.html)
+Inspired by  [person](https://www.kdnuggets.com/2021/02/deploy-flask-api-kubernetes-connect-micro-services.html)
